@@ -6,3 +6,6 @@ def is_full_connected(v, r):
         return True
     else:
         return False
+
+
+def connection_type(r, links):
