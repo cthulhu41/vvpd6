@@ -2,4 +2,7 @@
 
 
 def is_full_connected(v, r):
-
+    if r == (v * (v - 1)):
+        return True
+    else:
+        return False
