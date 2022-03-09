@@ -1,9 +1,21 @@
-"""Медведев Павел Сергеевич Лаборатнорная работа №4 по ВВПД Вариант 11 КИ21-17/1Б"""
+"""
+Медведев Павел Сергеевич
+Лаборатнорная работа №6 по ВВПД
+Вариант№ 11, «Про топологии сетей»
+КИ21-17/1Б
+"""
 
 
-def is_full_connected(v, r):
+def is_full_connected(v: int, r: int):
     """
-    Функция определяет полносвязность
+    The function defines full cohesion.
+    v - number of vertices(v > 4).
+    r - number of edges(r > 3).
+    Args:
+        v: int
+        r: int
+
+    Returns: bool -> True or False
     """
     if r == (v * (v - 1)):
         return True
@@ -11,9 +23,17 @@ def is_full_connected(v, r):
         return False
 
 
-def connection_type(r, links):
+def connection_type(r: int, links: list):
     """
-    Функция определеяет тип связи
+    The function defines the type of connection.
+    r - number of edges(r > 3).
+    links - an array of tuples of integers (i, j), where the pair i, j is the presence of connection between
+    vertices under numbers i and j (v > 𝑖 > 0, v > 𝑗 > 0).
+    Args:
+        r: int
+        links: list of tuples
+
+    Returns: int -> 1, 2, 3 or -1
     """
     dct = {}
     for i in links:
